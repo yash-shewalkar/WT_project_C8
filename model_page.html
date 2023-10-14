@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake News</title>
+
+    <!-- Bootstrap CSS links (you can use your existing links) -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.5.2/dist/css/bootstrap.min.css">
+
+   
+   
+
+    <!-- Font import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+
+    <!-- Your custom styles -->
+    <style>
+        /* Your existing CSS styles */
+        /* Additional styles for the new section */
+        
+        .large-text-section {
+            background-color: rgb(28, 43, 28);
+            color: rgb(255, 255, 255);
+            padding: 50px 10px;
+        }
+        
+        .large-text-input {
+            margin-top: 2rem;
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            background-color: transparent;
+            color: white;
+        }
+        
+        .try-me-button {
+            margin-top: 1rem;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .try-me-button:hover {
+            background-color: #0056b3;
+        }
+        
+        p {
+            font-size: 1.5rem;
+        }
+        
+        .img-fluid {
+            position: relative;
+            left: 100%;
+            margin: 2rem 1.5rem;
+            opacity: .8;
+            border-radius: 1.5rem;
+        }
+        
+        #result {
+            position: relative;
+            border: 2px solid white;
+            width: 300px;
+            margin: 20px 50px;
+            padding: 5px;
+            border-radius: 0.6rem;
+            left: 3.6%;
+            display: none;
+        }
+        
+        a {
+            text-decoration: none;
+            color: white;
+        }
+        
+        a:hover {
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Your existing code for header and sections -->
+
+    <!-- New section with "Try me" button and large text input -->
+    <section class="large-text-section">
+        <div class="container">
+            <form action="noaction.php">
+
+                <h1>Try Our Model</h1>
+                <p>Enter a news for analysis:</p>
+                <textarea id="inputText" name="text-content" class="large-text-input" placeholder="Enter your text here"></textarea>
+
+            </form>
+            <button onclick="showResult()" class="try-me-button" Verify here>Verify</button>
+            <button class="try-me-button " Go back><a href="index.html">Home</a></button>
+        </div>
+        <div id="result">
+            this is result box
+        </div>
+    </section>
+    <section class="col-md-4">
+        <img class="img-fluid" src="https://cdn.pixabay.com/photo/2014/05/21/22/28/old-newspaper-350376_1280.jpg" alt="truth" />
+
+    </section>
+
+    <!-- Include Bootstrap 5 JS (you need to have it locally or from a CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function showResult() {
+            var inputcontent = document.getElementById('inputText').value;
+            if (inputcontent === "") {
+                alert("You must enter a news!!!")
+
+            } else {
+
+                var resultBox = document.getElementById('result');
+                resultBox.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+
+</html>
